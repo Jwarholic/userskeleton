@@ -1,0 +1,14 @@
+<% if current_user %>
+<a href="/">Home</a>
+<a href="/users/<%= current_user.id %>"><%= current_user.first_name %></a>
+<br>
+<form action='/sessions' method='POST'>
+  <input type='hidden' name='_method' value='DELETE'>
+  <button type='submit'>Logout</button>
+</form>
+  <% else %>
+<a href="/users/new">Register</a>
+<a href="/sessions/new">Login</a>
+<a href="/">Home</a>
+<% end %>
+<a href="/users">users</a> 

@@ -1,0 +1,11 @@
+<% if @error %>
+		<%= @error %>
+	<% end %>
+
+<form method='post' action='/sessions'>
+	Email<br>
+	<input type="text" name="user[email]"><br>
+	Password<br>
+	<input type="password" name="user[password]"><br><br>
+	<input type="submit" value="Login">
+</form>
